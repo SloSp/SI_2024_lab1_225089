@@ -1,0 +1,22 @@
+commit 9c1f7fd69a2770465654ee857c0901af086cc60e (HEAD -> master, origin/master, origin/bug2, bug2)
+Author: Slobodan <slobodan.spasovski@students.finki.ukim.mk>
+Date:   Sat Apr 13 23:50:21 2024 +0200
+
+    Call method makeBigStringFrom in main class.
+
+commit b1bda21e70383287e78ca59ad92a97921e893790 (origin/bug1, bug1)
+Author: Slobodan <slobodan.spasovski@students.finki.ukim.mk>
+Date:   Sat Apr 13 23:41:15 2024 +0200
+
+    Call method filterOddLengthStrings in main class
+
+commit 52d0291cdb6ca50f2eee7487c851a6a7f98207ea
+Author: Slobodan <slobodan.spasovski@students.finki.ukim.mk>
+Date:   Sat Apr 13 23:23:48 2024 +0200
+
+     Fix wrong condition in filterOddLengthStrings
+
+commit c90a282e195cbe47e0bb35c1a2f48a41529ba61b
+Author: Slobodan <slobodan.spasovski@students.finki.ukim.mk>
+Date:   Sat Apr 13 21:50:12 2024 +0200
+:

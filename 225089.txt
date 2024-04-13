@@ -1,0 +1,57 @@
+1. /
+2.  линкот не води до самите репозиториуми со што го менуваме името од main во master
+3.  одиме на менито create new.. па new repository го именуваме и го ставаме private
+4.  mkdir SI_2024_lab1_225089       					     //правиме директориум
+    cd SI_2024_lab1_225089						    //влегуваме во него
+    git init								   //го иницијализираме	
+5.  git remote add origin https://github.com/SloSp/SI_2024_lab1_225089.git  // креираме референца со одалечениот репозиториум (со помош на урл од гит)
+6.  git add README.md.txt 						   //додаваме текцтуална датотека
+    git commit -m "Initial commit"					  //со порака ("Initial commit")
+7.  најпрво ги симнав сите фајлови и ги ставив во фолдерот во кој сто работам 
+    git add SILab1Main.java 						  //
+    git add SILab1_1.java						 //ги додадов сите фајлови кои што ги симнав
+    git add SILab1_2.java						//
+    git commit -m "Add starter code"				       //извршив commit со дадената порака ("Add starter code")
+8.  git push -u origin master      				      //каде правиме push на серверот со што ни излегува се на ремоте репотo
+    A: ја поправаме првата грешка во if со што ставаме !=0 и така ќе ги земеме стринговите со непарна должина
+    Б: ја поправаме и втората грешка исто така во if со што ставаме >= со што ќе земеме најмалку minLenght и поголеми од него
+9.  git checkout -b bug1						    //ја правиме првата гранка баг1
+    git checkout master						   	   //бидејќи сме ја направиле гранката веќе сме на неа и со оваа команда се враќаме на мастер(и двете гранки треба да се од мастер)	
+    git checkout -b bug2						  //ја правиме втората гранка баг2
+10. git checkout bug1							 //се враќаме на (првата) гранка баг1
+11. git add .								//со git add . ги додаваме сите фајлови во stage
+    git commit -m " Fix wrong condition in filterOddLengthStrings"     //правиме комит со порака "Fix wrong condition in filterOddLengthStrings"
+12. git checkout bug2						      //се префрламе на гранка баг2
+13. git add .							     //со git add . ги додаваме сите фајлови во stage
+    git commit -m "Fix wrong condition in makeBigStringFrom"	    //правиме комит со порака "Fix wrong condition in makeBigStringFrom"
+14. git checkout bug1						   //се враќаме на гранка баг1
+15. ја додаваме пораката што се бараше во линија 16 
+    git add .								//со git add . ги додаваме сите фајлови во stage
+    git commit -m "Call method filterOddLengthStrings in main class"   //правиме комит со порака "Call method filterOddLengthStrings in main class"
+16. git checkout bug2						      //се враќаме на гранка баг2
+17. git add .							     //со git add . ги додаваме сите фајлови во stage
+    git commit -m "Call method makeBigStringFrom in main class."    //правиме комит со порака "Call method makeBigStringFrom in main class."
+18. git push -u origin bug2					//сега сме на гранка баг2 каде правиме push на серверот со што ни излегува се на ремоте репотo
+    git checkout bug1					       //одаме на гранка баг1	
+    git push -u origin bug1				      //сега правиме push на серверот со што ни излегува се на ремоте репотo
+19. git checkout master					     //одиме на гранката мастер
+20. git merge bug1					    //ја мерџаме гранката баг1 на гранката мастер (Fast-forward)
+21. git push -u origin master				   //сега правиме push на master на серверот со што ни излегува се на ремоте репотo
+    git push -u origin bug1				  //Everything up-to-date
+    git push -u origin bug2				 //Everything up-to-date
+22. git checkout bug2					   	//одиме на гранката баг2
+23. git rebase master					       //rebase е процес од комбинирање или поместување секвенца од комити на врвот од новиот комит(се јавува грешка)
+    git add . 						      //правиме git add . на фајловите
+    git rebase --continue				     //сумираме дека се е во ред и дека нема да дојде до конфликт и дека ова е посакуваното сценарио што сакаме да го направиме
+24. git checkout master					    //се префрламе на главната гранка master
+25. git merge bug2					   //ја мерџнавме и гранката баг2 на мастер
+26. git push -u origin master				   //сега правиме push на master на серверот со што ни излегува се на ремоте репотo
+    git push -u origin bug1				  //Everything up-to-date
+    git push -u origin bug2				 //се јавува грешка при push (non-fast-forward)
+27. git push -u -f origin bug2				//правиме force на push командата
+28. git log							//правиме лог со што добиваме логови што и како сум работел до сега
+    git add .						       //правиме git add . на фајловите
+    git commit -m "Final commit"			      //правиме комит со порака "Final commit"
+29. git push -u origin master				   //сега правиме push на master на серверот со што ни излегува се на ремоте репотo
+    git push -u origin bug1				  //Everything up-to-date
+    git push -u origin bug2				 //се јавува грешка при push (non-fast-forward)
